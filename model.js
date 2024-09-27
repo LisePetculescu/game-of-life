@@ -1,5 +1,3 @@
-import * as controller from "./controller.js";
-
 export { init, grid, calculateNextGen, killAllCells, randomAliveCells };
 
 let grid = [
@@ -106,7 +104,6 @@ function randomAliveCells(newGame) {
   const randomFactor = 0.2;
   // 20% chance for cell to be 1 == alive
 
-  
   for (let row = 0; row < rows; row++) {
     for (let col = 0; col < cols; col++) {
       let value = Math.random();

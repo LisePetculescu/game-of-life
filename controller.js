@@ -14,13 +14,10 @@ function init() {
   model.init(gridSize);
   view.init(gridSize, model.grid);
 
-  // model.calculateNextGen();
-
   setInterval(() => {
     model.calculateNextGen();
     view.updateCells(gridSize, model.grid);
   }, 500);
-  // window.model = model;
 }
 
 function addRandom() {
