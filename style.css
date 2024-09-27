@@ -1,7 +1,7 @@
 #displayBoard {
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(20, max-content);
+  grid-template-columns: repeat(50, max-content);
   gap: 1px;
   background-color: white;
   border: 5px black solid;
@@ -28,9 +28,10 @@ body {
 }
 
 button {
-  width: 60px;
+  width: fit-content;
   background-color: rgb(106, 180, 106);
   cursor: pointer;
+  margin-top: 5px;
 }
 
 button:hover {

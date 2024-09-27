@@ -5,6 +5,7 @@ export { init, updateCells };
 function init(gridSize, grid) {
   console.log("view kører");
   document.querySelector("#clearGame").addEventListener("click", controller.clearGame);
+  document.querySelector("#addRandomAliveCells").addEventListener("click", controller.addRandom);
 
   createBoard(gridSize);
   updateCells(gridSize, grid);

@@ -1,6 +1,6 @@
 import * as controller from "./controller.js";
 
-export { init, grid, calculateNextGen, killAllCells };
+export { init, grid, calculateNextGen, killAllCells, randomAliveCells };
 
 let grid = [
   [0, 0, 0, 0],
@@ -18,7 +18,7 @@ function init(gridSize) {
   cols = gridSize.cols;
 
   createGenGrid(gridSize.rows, gridSize.cols);
-  randomAliveCells();
+  randomAliveCells(true);
   console.table(grid);
 }
 
@@ -102,26 +102,41 @@ function createGenGrid(rows, cols) {
   grid = newGrid;
 }
 
-function randomAliveCells() {
+function randomAliveCells(newGame) {
   const randomFactor = 0.2;
   // 20% chance for cell to be 1 == alive
 
+  
   for (let row = 0; row < rows; row++) {
     for (let col = 0; col < cols; col++) {
       let value = Math.random();
       if (value < randomFactor) {
         grid[row][col] = 1;
-      } else {
+      } else if (newGame) {
         grid[row][col] = 0;
       }
     }
   }
 }
 
+// function addRandomAliveCells() {
+//   const randomFactor = 0.2;
+//   // 20% chance for cell to be 1 == alive
+
+//   for (let row = 0; row < rows; row++) {
+//     for (let col = 0; col < cols; col++) {
+//       let value = Math.random();
+//       if (value < randomFactor) {
+//         grid[row][col] = 1;
+//       }
+//     }
+//   }
+// }
+
 function killAllCells() {
   for (let row = 0; row < rows; row++) {
     for (let col = 0; col < cols; col++) {
-        grid[row][col] = 0;
+      grid[row][col] = 0;
     }
   }
 }
