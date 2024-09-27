@@ -1,3 +1,5 @@
+// https://petlatkea.notion.site/Game-of-Life-1031d7fec097804e847dfaa27fae8ae8
+
 import * as view from "./view.js";
 import * as model from "./model.js";
 
