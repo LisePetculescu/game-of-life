@@ -1,0 +1,38 @@
+#displayBoard {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(20, max-content);
+  gap: 1px;
+  background-color: white;
+  border: 5px black solid;
+  padding: 5px;
+}
+
+.cell {
+  background-color: rgb(155, 147, 147);
+
+  min-width: 10px;
+  min-height: 10px;
+}
+
+.alive {
+  background-color: rgb(106, 180, 106);
+}
+
+body {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(215, 169, 207);
+  /* background-color: rgb(99, 167, 99); */
+}
+
+button {
+  width: 60px;
+  background-color: rgb(106, 180, 106);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(121, 227, 121);
+}
